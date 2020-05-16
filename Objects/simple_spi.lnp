@@ -1,0 +1,11 @@
+--cpu=Cortex-M4.fp
+".\objects\main.o"
+".\objects\liquidcrystal.o"
+".\objects\adc.o"
+".\objects\spi.o"
+".\objects\startup_stm32f407xx.o"
+".\objects\system_stm32f4xx.o"
+--strict --scatter ".\Objects\simple_spi.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\simple_spi.map" -o .\Objects\simple_spi.axf
